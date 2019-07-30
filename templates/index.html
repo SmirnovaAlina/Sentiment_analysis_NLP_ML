@@ -1,0 +1,11 @@
+<!doctype html>
+    <title>Upload new review</title>
+    <h1>Review Sentiment Prediction</h1>
+    <div class="ml-container">
+      <p>Enter your review here:</p>
+      <form action="{{ url_for('result')}}" method="POST">
+      <p><input type="text" id="review-id" name="review" required>
+         <input type="submit" class="btn-info" value="Predict">
+    </form>
+    </div>
+    </html>
