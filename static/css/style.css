@@ -2,7 +2,6 @@ body{
 	font:15px/1.5 Arial, Helvetica,sans-serif;
 	padding: 0px;
 	text-align: center;
-	background-image: {{ url_for ('static', filename = "img/bg-masthead.jpg") }};
 	background-repeat: no-repeat;
 	background-size: auto auto;
 
@@ -17,7 +16,7 @@ header{
 	border-bottom:#448AFF 3px solid;
 	height:120px;
 	width:100%;
-	padding-top:30px;
+	padding-top:50px;
 }
 .main-header{
 			text-align:center;
@@ -33,9 +32,11 @@ header{
 }
 
 
+
 header p{
 	font-size:20px;
-	color:#448AFF ;
+	color:#448AFF;
+	padding-top:30px;
 }
 .btn-info {background-color: #2196F3;
 	height:40px;

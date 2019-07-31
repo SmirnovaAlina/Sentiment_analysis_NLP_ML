@@ -5,22 +5,53 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Predict</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<header>
 		<div class="container">
-		<div id="brandname">
-			Enjoy the result of prediction
-		</div>
-		
+			<div id="brandname">
+				Enjoy the result of prediction
+			</div>		
 		</div>
 	</header>
-	<p style="color:#448AFF;font-size:20;text-align: center;"><b>Results of two Models</b></p>
-	<p id = "results"></p>
-	<script>
+	<p style="color:#448AFF;font-size:20;text-align: center; margin-top: 30px;"><b>Results of two Models</b></p>
+	<!-- <p id = "results"></p> -->
+	<div class="container">
+		<div class="jumbotron">
+			<h6>{{ text }}</h6>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-striped">
+					<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col"></th>
+					</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+	<!-- <script>
 		var prediction = JSON.parse('{{ prediction | tojson}}');
-		document.getElementById('results').innerHTML = "You prediction from Naive Baies model is " + prediction.Naive_Bayes  ;
+		document.getElementById('results').innerHTML = "You prediction from Naive Bayes model is " + prediction.Naive_Bayes + "\n You prediction from SVM model is " + prediction.SVM_model ;
+	</script> -->
+	<script> 
+		var prediction = JSON.parse('{{ prediction | tojson}}');
+		d3.select("tbody")
+		.selectAll("tr")
+		.data(prediction)
+		.enter()
+		.append("tr")
+		.html(function(d) {
+			return `<td>${d.model}</td><td>${d.prediction}</td>`;
+  		});
+	
 	</script>
 </body>
 </html>
