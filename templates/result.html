@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Predict</title>
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Enjoy the result of prediction
+		</div>
+		
+		</div>
+	</header>
+	<p style="color:#448AFF;font-size:20;text-align: center;"><b>Results of two Models</b></p>
+	<p id = "results"></p>
+	<script>
+		var prediction = JSON.parse('{{ prediction | tojson}}');
+		document.getElementById('results').innerHTML = "You prediction from Naive Baies model is " + prediction.Naive_Bayes  ;
+	</script>
+</body>
+</html>
