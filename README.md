@@ -13,13 +13,13 @@ Removal of  "stop  words", numbers, punctuation, downcasing
 Next we will perform the process of selecting the distinctive characteristics using TF-IDF method. 
 
 ## Removing Data Bias
-<img src="image/Project_3_Sentiment_Analysis_-_Google_Slides.jpg" alt="Oscar" height="250" width="600">
+<img src="Resouces/Project_3_Sentiment_Analysis_-_Google_Slides.jpg" alt="Oscar" height="250" width="600">
 
 
 
 ## Tools Used 
 <hr>
-<img src="image/App_schema.jpg" alt="Oscar" height="250" width="600">
+<img src="Resouces/App_schema.jpg" alt="Oscar" height="250" width="600">
 
 * Python Pandas
 * Python Numpy
