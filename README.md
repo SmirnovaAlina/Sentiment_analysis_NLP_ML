@@ -8,15 +8,18 @@ In order to reduce noise of text, reduce dimensionality, and assist in the impro
 Tokenization Process
 Removal of  "stop  words", numbers, punctuation, downcasing
 
-##Feature Selection
+## Feature Selection
 <hr>
 Next we will perform the process of selecting the distinctive characteristics using TF-IDF method. 
 
-##Removing Data Bias
-<img src="Project_3_Sentiment_Analysis_-_Google_Slides.jpg" alt="Oscar" height="250" width="600">
+## Removing Data Bias
+<img src="image/Project_3_Sentiment_Analysis_-_Google_Slides.jpg" alt="Oscar" height="250" width="600">
 
-##Tools Used 
+
+
+## Tools Used 
 <hr>
+<img src="image/App_schema.jpg" alt="Oscar" height="250" width="600">
 
 * Python Pandas
 * Python Numpy
